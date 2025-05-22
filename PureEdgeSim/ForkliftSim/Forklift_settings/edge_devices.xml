@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<edge_devices>
+    <device name="Forklift">
+        <connectivity>cellular</connectivity>
+        <mobility>true</mobility>
+        <speed>2.78</speed><!-- 10km/h σε m/s -->
+        <minPauseDuration>479</minPauseDuration>        <!-- the minimum delay before moving to a new location  (8 minutes in seconds)-->
+        <maxPauseDuration>480</maxPauseDuration>        <!-- the maximum delay before moving to a new location (8 minutes in seconds)-->
+        <minMobilityDuration>30</minMobilityDuration>   <!-- the minimum delay before stopping-->
+        <maxMobilityDuration>60</maxMobilityDuration>   <!-- the maximum delay before stopping-->
+        <battery>true</battery>                         <!-- true: the device has a battery, false: the device has no battery-->
+        <percentage>100</percentage>                    <!-- percentage of this device type (only one forklift)-->
+        <batteryCapacity>150</batteryCapacity>          <!-- battery capacity in Watt-Hour -->
+        <initialBatteryLevel>100</initialBatteryLevel>  <!-- initial battery percentage. e.g. set it to 50 in order to generate devices with 50% remaining energy-->
+        <idleConsumption>5.2</idleConsumption>          <!-- idle energy consumption/second, default=0 .000010975 -->
+        <maxConsumption>16</maxConsumption>             <!-- max energy consumption/second, when device cpu is use at 100% -->
+        <isOrchestrator>true</isOrchestrator>          <!-- it has a task orchestrator or not -->
+        <generateTasks>true</generateTasks>            <!-- true: the device generates tasks, false: the device does not generate tasks-->
+        <cores>4</cores><!-- Jetson Nano specs -->
+        <mips>32000</mips>
+        <ram>16000</ram>
+        <storage>64000</storage>
+    </device>
+</edge_devices> 

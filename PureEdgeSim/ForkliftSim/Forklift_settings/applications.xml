@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<applications>
+    <!-- Εφαρμογή που θα εκτελείται στο drone -->
+    <application name="OnForkliftHealthClass">
+        <type>IoT Sensor</type> 
+        <rate>900</rate> <!-- how many tasks are generated each minute -->
+        <usage_percentage>100</usage_percentage> <!-- percentage of devices using this type of applications -->
+        <latency>1</latency> <!-- latency in seconds -->
+        <container_size>250</container_size> <!--application/container size in kilobytes -->
+		<request_size>100</request_size> <!-- the offloading request that will be sent to the orchestrator and then to the device where the task will be offloaded in kilobytes -->
+		<results_size>100</results_size> <!-- the results of the offlaoded task in kilobytes -->
+        <task_length>8000</task_length> <!--MI: million instructions -->
+    </application>
+</applications> 

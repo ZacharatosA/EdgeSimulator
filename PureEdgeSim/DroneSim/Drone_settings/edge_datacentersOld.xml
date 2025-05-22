@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<edge_datacenters>
+    <datacenter name="GNB1">
+        <periphery>true</periphery>
+        <idleConsumption>7</idleConsumption>
+        <maxConsumption>15</maxConsumption>
+        <isOrchestrator>false</isOrchestrator>
+        <location>
+            <x_pos>100</x_pos>
+            <y_pos>100</y_pos>
+        </location>
+        <cores>1</cores><!-- Jetson Orin Nano specs -->
+        <mips>71000</mips>
+        <ram>8192</ram>
+        <storage>64000</storage>
+    </datacenter>
+    <datacenter name="GNB2">
+        <periphery>true</periphery>
+        <idleConsumption>7</idleConsumption>
+        <maxConsumption>15</maxConsumption>
+        <isOrchestrator>false</isOrchestrator>
+        <location>
+            <x_pos>300</x_pos>
+            <y_pos>100</y_pos>
+        </location>
+        <cores>1</cores>
+        <mips>71000</mips>
+        <ram>8192</ram>
+        <storage>64000</storage>
+    </datacenter>
+    <datacenter name="GNB3">
+        <periphery>true</periphery>
+        <idleConsumption>7</idleConsumption>
+        <maxConsumption>15</maxConsumption>
+        <isOrchestrator>false</isOrchestrator>
+        <location>
+            <x_pos>200</x_pos>
+            <y_pos>200</y_pos>
+        </location>
+        <cores>1</cores>
+        <mips>71000</mips>
+        <ram>8192</ram>
+        <storage>64000</storage>
+    </datacenter>
+    <datacenter name="GNB4">
+        <periphery>true</periphery>
+        <idleConsumption>7</idleConsumption>
+        <maxConsumption>15</maxConsumption>
+        <isOrchestrator>false</isOrchestrator>
+        <location>
+            <x_pos>100</x_pos>
+            <y_pos>300</y_pos>
+        </location>
+        <cores>1</cores>
+        <mips>71000</mips>
+        <ram>8192</ram>
+        <storage>64000</storage>
+    </datacenter>
+    <datacenter name="GNB5">
+        <periphery>true</periphery>
+        <idleConsumption>7</idleConsumption>
+        <maxConsumption>15</maxConsumption>
+        <isOrchestrator>false</isOrchestrator>
+        <location>
+            <x_pos>300</x_pos>
+            <y_pos>300</y_pos>
+        </location>
+        <cores>1</cores>
+        <mips>71000</mips>
+        <ram>8192</ram>
+        <storage>64000</storage>
+    </datacenter>
+    <network_links>
+        <!-- Συνδέσεις μεταξύ των GNBs -->
+        <link>
+            <from>GNB1</from>
+            <to>GNB2</to>
+            <latency>0.002</latency>
+        </link>
+        <link>
+            <from>GNB2</from>
+            <to>GNB3</to>
+            <latency>0.002</latency>
+        </link>
+        <link>
+            <from>GNB3</from>
+            <to>GNB4</to>
+            <latency>0.002</latency>
+        </link>
+        <link>
+            <from>GNB4</from>
+            <to>GNB5</to>
+            <latency>0.002</latency>
+        </link>
+        <link>
+            <from>GNB5</from>
+            <to>GNB1</to>
+            <latency>0.002</latency>
+        </link>
+        <!-- Σύνδεση με cloud -->
+        <link>
+            <from>default_cloud</from>
+            <to>GNB1</to>
+            <latency>0.05</latency>
+        </link >
+    </network_links>
+</edge_datacenters>
