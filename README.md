@@ -1,4 +1,4 @@
-# EdgeSimulator# EdgeSimulator
+# EdgeSimulator 
 
 ## Introduction
 
