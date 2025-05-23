@@ -16,7 +16,7 @@ The Data-driven Automated Virtual Energy grid toolkit is used for generating rea
 
 1. Clone or download DAVE_core from: [https://github.com/DaveFoss/DAVE_core](https://github.com/DaveFoss/DAVE_core)
 2. Install it using one of these methods:
-   - **Option 1 **: `pip install dave_core`
+   - **Option 1**: `pip install dave_core`
    - **Option 2**: `pip install https://github.com/DaveFoss/DAVE_core/archive/main.zip`
    - **Option 3 (recommended)**: Download the repository and run `pip install -e .` within the directory
 
